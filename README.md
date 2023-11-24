@@ -1,2 +1,2 @@
 # SpotifyAlarm
-Music alarm using Spotify api in Python
+Music alarm using Spotify Python API.
