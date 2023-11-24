@@ -1,2 +1,5 @@
 alarmConfig.ini
 venv/*
+.cache
+.idea/*
+__pycache__/*
