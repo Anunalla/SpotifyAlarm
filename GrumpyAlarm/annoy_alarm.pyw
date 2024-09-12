@@ -46,18 +46,21 @@ if __name__ == "__main__":
                     volume.SetMute(0, None)
                     volume.SetMasterVolumeLevel(-5.5, None)
                     
-                    for i in range(7):
-                        winsound.PlaySound("*", winsound.SND_ALIAS)
+                    for i in range(5):
+                        winsound.PlaySound('SystemExclamation', winsound.SND_ALIAS)
+                        time.sleep(7)
                     current_time = dtm.now()
-                    played = True            
+                    played = True  
+                    snooze_count = 0          
             else:
                 if(played):
                     if(snooze_count<num_snoozes):
-                        if(dtm.now >= (current_time+ dt.timedelta(0, 900))):
+                        if((dtm.now()-current_time) >= dt.timedelta(minutes=15)):
                             volume.SetMute(0, None)
                             volume.SetMasterVolumeLevel(-5.5, None)
-                            for i in range(7):
-                                winsound.PlaySound("*", winsound.SND_ALIAS)
+                            for i in range(5):
+                                winsound.PlaySound('SystemExclamation', winsound.SND_ALIAS)
+                                time.sleep(7)
                             snooze_count+=1
                             current_time = dtm.now()
                             played = True
